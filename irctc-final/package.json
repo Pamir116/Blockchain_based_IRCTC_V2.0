@@ -1,0 +1,25 @@
+{
+  "name": "irctc-blockchain-combined",
+  "version": "2.0.0",
+  "description": "IRCTC Blockchain — Combined v1 + v2 complete system",
+  "scripts": {
+    "compile":      "npx hardhat compile",
+    "test":         "npx hardhat test",
+    "test:verbose": "npx hardhat test --reporter verbose",
+    "node":         "npx hardhat node",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:amoy":  "npx hardhat run scripts/deploy.js --network amoy",
+    "backend":      "cd backend && node server.js",
+    "frontend":     "cd frontend && npm start",
+    "dev":          "concurrently \"npm run node\" \"sleep 3 && npm run deploy:local\" \"sleep 8 && npm run backend\" \"sleep 10 && npm run frontend\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0",
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.4.0"
+  }
+}

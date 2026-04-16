@@ -1,0 +1,14 @@
+node_modules/
+.env
+artifacts/
+cache/
+typechain-types/
+frontend/node_modules/
+frontend/build/
+backend/node_modules/
+frontend/src/abi/addresses.json
+frontend/src/abi/*.json
+backend/contractAddresses.json
+*.log
+.DS_Store
+coverage/
